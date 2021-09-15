@@ -21,7 +21,6 @@ body{
 
 }
 .box{
-  width:200px;
   padding: 5px;
 }
 .logo{
@@ -63,4 +62,29 @@ body{
   .mobile-show {
   display: none;
   }
+}
+
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #29262b;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #5e5a95;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #c4c2e8;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
