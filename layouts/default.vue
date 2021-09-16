@@ -6,11 +6,11 @@
       </div>
     <el-footer style="padding: 0;">
       <div class="container footer ">
-        <div style="width: 300px" class="box">
+        <div style="" class="box">
        ООО "МиксЭнерджи"  © 2021
           </div>
         <div class="box mobile-hide" style="width:150px; padding-left: 100px;">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad0f82ac64f3dd42a610f1377d049a782b659e73cfd5f932d24d949e17ddd0b0b&amp;source=constructor" width="300" height="250" frameborder="0"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad0f82ac64f3dd42a610f1377d049a782b659e73cfd5f932d24d949e17ddd0b0b&amp;source=constructor" width="200" height="150" frameborder="0"></iframe>
            </div>
         <div class="mobile-show">
           <el-button type="text" @click="dialogTableVisible = true">
@@ -39,7 +39,9 @@ mixenerdgy@mail.ru
 Директор Михашонок Сергей Васильевич, на основании Устава
 
 Приказ № 8-К от 19.02.2020г.
+
   </div>
+        <el-image style="width: 200px" src="https://mixenerdgy.by/wp-content/uploads/2020/05/akkreditovany-na-BUTB.jpg"></el-image>
       </div>
     </el-footer>
 
@@ -80,7 +82,8 @@ export default {
 }
 @media screen and (min-width: 1023px) {
   .about{
-    margin-left: 200px;
+    margin-left: 100px;
+    width: 700px;
   }
 }
 @media screen and (max-width: 1023px) {
