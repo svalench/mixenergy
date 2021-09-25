@@ -7,7 +7,7 @@
         <ul>
           <li v-for="(i,k) in menu" :key="k"><el-row>
             <el-col :span="4">
-            <el-image :src="i.icon"></el-image>
+            <el-image  style="width: 100px" :src="i.img"></el-image>
             </el-col>
             <el-col :span="20">
               <el-popover
@@ -19,7 +19,7 @@
               <div class="text-class"  slot="reference">{{i.name}}</div>
                 <div style="display: flex;">
                   <div class="cart-menu" v-for="(ch,k) in i.child" :key="k">
-                    <el-image :src="ch.img"></el-image>
+                    <el-image style="width: 100px" :src="ch.img"></el-image>
                     <div>{{ch.name}}</div>
                   </div>
                 </div>
@@ -216,6 +216,9 @@ export default {
       }
     }
   },
+  async fetch(){
+      this.getCategories()
+  },
   mounted() {
     // Setup the event listener and execute it once in case we are already scrolled
     window.addEventListener('scroll', this.scrollHandler);
@@ -225,6 +228,10 @@ export default {
     window.removeEventListener('scroll', this.scrollHandler);
   },
   methods: {
+    async getCategories(){
+        let data = await this.$axios.get('/catalog/categories/');
+        this.menu = data.data.results;
+    },
     scrollHandler(e) {
       let wh = window.innerHeight;
       let elec = this.$refs.electrika.getBoundingClientRect();

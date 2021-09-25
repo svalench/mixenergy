@@ -42,8 +42,11 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: false,
+    baseURL: "http://127.0.0.1:8000/"
+    // baseURL: "http://api.beautymasters.online/"
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

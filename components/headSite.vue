@@ -2,11 +2,10 @@
 <el-header style="padding: 0; margin-bottom: 20px;">
       <div class="container head ">
         <nuxt-link to="/">
-        <div class="box logo">
-          <el-image src="http://mixenerdgy.by/wp-content/uploads/2019/07/Logo-miksenerdzhi-N.png"></el-image>
+        <div class="box logo" style="margin-right: 20px">
+          <el-image style="width: 150px;" :src="require('@/assets/img/Group.svg')"></el-image>
         </div>
           </nuxt-link>
-        <div class="box mobile-hide"><h1 style="font-size: 18px;">ООО "МиксЭнерджи"</h1></div>
         <div @click="$router.push('/catalog')" class="box mobile-hide"><span class="menu-btn">Каталог</span></div>
         <div @click="$router.push('/sertificates')" class="box mobile-hide"><span class="menu-btn">Сертификаты</span></div>
         <div @click="$router.push('/about')" class="box mobile-hide"><span class="menu-btn">Контакты</span></div>
